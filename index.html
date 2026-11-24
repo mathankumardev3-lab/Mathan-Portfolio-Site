@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Mathan Kumar - Python Full-Stack Developer and founder of Trillion Game. Modern websites, billing softwares, CRM, inventory, and e-commerce platforms.">
+    <meta name="author" content="Mathan Kumar">
+
+    <title>Mathan Kumar | Python Full-Stack Developer</title>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons for universal icon reliability -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS CDN for grid & responsive utility -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              beach: {
+                DEFAULT: '#F7F3EB',
+                card: '#FFFFFF',
+                border: '#E4DAC9',
+                subtle: '#EFE9DD',
+                warm: '#DFCBB3',
+              },
+              darkred: {
+                DEFAULT: '#8B0000',
+                crimson: '#A31212',
+                dark: '#660000',
+                light: '#FBEBEB',
+              },
+              dark: '#111827',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar fixed top-0 left-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+
+        <a class="flex items-center text-lg font-bold text-dark tracking-tight" href="#home">
+            <span class="brand-dot"></span>
+            Mathan Kumar
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-7">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <a href="https://wa.me/917845360611?text=Hello%20Mathan%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="hidden sm:inline-flex btn-primary-custom text-xs">
+                <i class="bi bi-whatsapp"></i>
+                WhatsApp
+            </a>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="nav-toggle" class="md:hidden p-2 rounded-lg text-dark hover:bg-beach-subtle" aria-label="Toggle Navigation">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-6 bg-beach border-b border-beach-border flex flex-col gap-3 text-sm">
+        <a class="nav-link py-1" href="#home">Home</a>
+        <a class="nav-link py-1" href="#about">About</a>
+        <a class="nav-link py-1" href="#skills">Skills</a>
+        <a class="nav-link py-1" href="#services">Services</a>
+        <a class="nav-link py-1" href="#projects">Projects</a>
+        <a class="nav-link py-1" href="#contact">Contact</a>
+        <a href="https://wa.me/917845360611" target="_blank" rel="noopener noreferrer" class="btn-primary-custom text-center text-xs justify-center mt-2">
+            <i class="bi bi-whatsapp"></i> WhatsApp Chat
+        </a>
+    </div>
+</nav>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section id="home" class="hero-section">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[75vh]">
+
+            <!-- Left Content -->
+            <div class="lg:col-span-7">
+
+                <div class="hero-badge mb-4">
+                    <span class="status-dot"></span>
+                    Available for freelance projects
+                </div>
+
+                <p class="hero-greeting mb-2">
+                    Hello, I'm Mathan
+                </p>
+
+                <h1 class="hero-title">
+                    Python Full-Stack <br>
+                    <span>Developer.</span>
+                </h1>
+
+                <p class="hero-description mt-4">
+                    I build modern, responsive websites and powerful web applications for businesses using Python, Django and modern web technologies. Founder of <strong>Trillion Game</strong>.
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <a href="#projects" class="btn-primary-custom text-sm">
+                        <span>View My Work</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                    <a href="#contact" class="btn-outline-custom text-sm">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+
+                <!-- Social Links (Bootstrap Icons: GitHub, WhatsApp, Instagram, Email) -->
+                <div class="hero-socials mt-8">
+                    <a href="https://github.com/mathankumardev3-lab" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="https://wa.me/917845360611" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/trilliongame.digital?evlk=MTV0MXpleHJsYmpmMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="mailto:mathankumar.dev3@gmail.com" aria-label="Email">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Right Hero Card: Signature Terminal Window with Floating Experience Pill -->
+            <div class="lg:col-span-5 text-center mt-6 lg:mt-0">
+                <div class="hero-card">
+
+                    <div class="hero-code">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="code-lang">developer.py</span>
+                        </div>
+
+                        <div class="code-body">
+                            <p>
+                                <span class="code-purple">class</span>
+                                Developer:
+                            </p>
+
+                            <p class="ps-4">
+                                <span class="code-purple">name</span>
+                                = <span class="code-green">"Mathan"</span>
+                            </p>
+
+                            <p class="ps-4">
+                                <span class="code-purple">stack</span>
+                                = <span class="code-green">"Python + Django"</span>
+                            </p>
+
+                            <p class="ps-4">
+                                <span class="code-purple">agency</span>
+                                = <span class="code-green">"Trillion Game"</span>
+                            </p>
+
+                            <p class="ps-4">
+                                <span class="code-purple">services</span>
+                                = <span class="code-sand">["Billing", "CRM", "Web"]</span>
+                            </p>
+
+                            <p>
+                                <span class="code-purple">return</span>
+                                <span class="code-red">"Let's build!"</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="hero-floating-badge hidden sm:flex">
+                        <div class="badge-icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs font-bold text-dark">Trillion Game</div>
+                            <div class="text-[11px] text-muted">Building Digital Products</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= ABOUT ME ================= -->
+
+<section id="about" class="section-padding bg-white border-y border-beach-border">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-5">
+                <div class="about-card">
+                    <div class="about-stat-number mb-2">01<span>.</span></div>
+                    <h3 class="text-2xl font-extrabold text-dark tracking-tight mb-4">
+                        Building ideas into <span class="text-primary">digital products.</span>
+                    </h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">
+                        I'm Mathan Kumar, a Python Full-Stack Developer focused on building useful and modern web experiences for businesses.
+                    </p>
+
+                    <div class="pt-4 border-t border-beach-border flex items-center justify-between text-xs text-muted font-medium">
+                        <span>DEVELOPER BEHIND TRILLION GAME</span>
+                        <span class="text-primary font-bold">2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7">
+                <p class="section-label">ABOUT ME</p>
+                <h2 class="section-title mt-1">
+                    Developer behind <span>Trillion Game.</span>
+                </h2>
+
+                <p class="text-muted mt-4 text-base leading-relaxed">
+                    I'm Mathan Kumar, a Python Full-Stack Developer focused on building useful and modern web experiences.
+                </p>
+
+                <p class="text-muted mt-2 text-base leading-relaxed">
+                    I started <strong>Trillion Game</strong> to help small businesses build a professional online presence through websites and web applications.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    <div class="about-info-item">
+                        <i class="bi bi-code-slash"></i>
+                        <div>
+                            <strong class="block text-dark text-sm font-bold">Full-Stack</strong>
+                            <small class="text-muted text-xs">Development</small>
+                        </div>
+                    </div>
+
+                    <div class="about-info-item">
+                        <i class="bi bi-building"></i>
+                        <div>
+                            <strong class="block text-dark text-sm font-bold">Business</strong>
+                            <small class="text-muted text-xs">Websites</small>
+                        </div>
+                    </div>
+
+                    <div class="about-info-item">
+                        <i class="bi bi-database"></i>
+                        <div>
+                            <strong class="block text-dark text-sm font-bold">CRM & Billing</strong>
+                            <small class="text-muted text-xs">Custom Systems</small>
+                        </div>
+                    </div>
+
+                    <div class="about-info-item">
+                        <i class="bi bi-send"></i>
+                        <div>
+                            <strong class="block text-dark text-sm font-bold">Direct Support</strong>
+                            <small class="text-muted text-xs">Always Available</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="section-padding">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center max-w-xl mx-auto mb-14">
+            <p class="section-label">MY TOOLKIT</p>
+            <h2 class="section-title mt-1">
+                Technologies I <span>work with.</span>
+            </h2>
+            <p class="section-sub mx-auto mt-2 text-sm">
+                Frontend technologies, backend frameworks, database management, and development tools.
+            </p>
+        </div>
+
+        <!-- 12 Clean Skills Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-filetype-html text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">HTML</h4>
+                <p class="text-xs text-muted mt-1">Semantic Markup</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-filetype-css text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">CSS</h4>
+                <p class="text-xs text-muted mt-1">Responsive Styling</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-bootstrap text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Bootstrap</h4>
+                <p class="text-xs text-muted mt-1">UI Components</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-filetype-js text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">JavaScript</h4>
+                <p class="text-xs text-muted mt-1">Vanilla ES6+ & DOM</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-filetype-py text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Python</h4>
+                <p class="text-xs text-muted mt-1">Backend & Logic</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-layers text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Django</h4>
+                <p class="text-xs text-muted mt-1">Full-Stack Framework</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-diagram-3 text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Django REST Framework</h4>
+                <p class="text-xs text-muted mt-1">RESTful Web APIs</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-database text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">MySQL</h4>
+                <p class="text-xs text-muted mt-1">Relational Database</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-terminal text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Linux</h4>
+                <p class="text-xs text-muted mt-1">Bash, Shell & Server</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-stars text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Antigravity</h4>
+                <p class="text-xs text-muted mt-1">Agentic AI Workflows</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-robot text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Claude</h4>
+                <p class="text-xs text-muted mt-1">AI Assisted Engineering</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon-wrap">
+                    <i class="bi bi-git text-xl"></i>
+                </div>
+                <h4 class="font-bold text-sm text-dark">Git & Deployment</h4>
+                <p class="text-xs text-muted mt-1">Version Control & Pages</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= SERVICES (Billing, CRM, Inventory, E-Commerce, Maintenance, Business Websites) ================= -->
+
+<section id="services" class="section-padding bg-white border-y border-beach-border">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center max-w-xl mx-auto mb-14">
+            <p class="section-label">SERVICES</p>
+            <h2 class="section-title mt-1">
+                What I can <span>build for you.</span>
+            </h2>
+            <p class="section-sub mx-auto mt-2 text-sm">
+                Custom software solutions, business websites, e-commerce, and long-term maintenance.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- 1. Billing Softwares -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-receipt text-xl"></i>
+                </div>
+                <h4>Billing Softwares</h4>
+                <p>Custom POS and invoice billing systems tailored for shops, salons, clinics, and businesses with instant invoice printing, GST calculation, and daily sales reports.</p>
+            </div>
+
+            <!-- 2. CRM Systems -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-people text-xl"></i>
+                </div>
+                <h4>CRM Systems</h4>
+                <p>Full customer relationship management platforms to track leads, manage customer interactions, organize pipelines, and automate follow-ups.</p>
+            </div>
+
+            <!-- 3. Inventory Systems -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-box-seam text-xl"></i>
+                </div>
+                <h4>Inventory Management</h4>
+                <p>Real-time stock tracking across warehouses, automated low-stock reorder alerts, supplier catalogs, and batch barcode records.</p>
+            </div>
+
+            <!-- 4. E-Commerce -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-cart3 text-xl"></i>
+                </div>
+                <h4>E-Commerce</h4>
+                <p>Custom online stores with product catalogs, shopping carts, WhatsApp order notifications, and straightforward checkout flows.</p>
+            </div>
+
+            <!-- 5. Business Websites -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-globe text-xl"></i>
+                </div>
+                <h4>Business Websites</h4>
+                <p>Clean, professional, and fast-loading websites that establish credible authority for your business and convert visitors into clients.</p>
+            </div>
+
+            <!-- 6. Website Maintenance -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-shield-check text-xl"></i>
+                </div>
+                <h4>Website Maintenance</h4>
+                <p>Regular updates, performance monitoring, backup management, bug fixes, and continuous technical support to keep your site running seamlessly.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PROJECTS (With Verified Working Live Demos & GitHub Links) ================= -->
+
+<section id="projects" class="section-padding">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center max-w-xl mx-auto mb-14">
+            <p class="section-label">MY WORK</p>
+            <h2 class="section-title mt-1">
+                Featured <span>projects.</span>
+            </h2>
+            <p class="section-sub mx-auto mt-2 text-sm">
+                Real-world projects demonstrating my development skills.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- 1. Kaveri Bridal & Beauty Studio -->
+            <div class="project-card">
+                <div class="project-image project-gradient-1">
+                    <i class="bi bi-flower1"></i>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <small>HTML • CSS • JavaScript</small>
+                        <h4>Kaveri Bridal & Beauty Studio</h4>
+                        <p>A beauty salon website for bridal packages, makeover services, and WhatsApp bookings.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://mathankumardev3-lab.github.io/kaveri-bridal-beauty-studio/" target="_blank" rel="noopener noreferrer" class="btn-project-demo">
+                            <span>Live Demo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="https://github.com/mathankumardev3-lab/kaveri-bridal-beauty-studio" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                            <i class="bi bi-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. CarePlus Clinic -->
+            <div class="project-card">
+                <div class="project-image project-gradient-2">
+                    <i class="bi bi-hospital"></i>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <small>HTML • Bootstrap • JavaScript</small>
+                        <h4>CarePlus Clinic</h4>
+                        <p>A multispecialty clinic website with doctor directory, OPD info, and patient consultation.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://mathankumardev3-lab.github.io/careplus_clinic/" target="_blank" rel="noopener noreferrer" class="btn-project-demo">
+                            <span>Live Demo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="https://github.com/mathankumardev3-lab/careplus_clinic" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                            <i class="bi bi-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Taste & Thyme -->
+            <div class="project-card">
+                <div class="project-image project-gradient-3">
+                    <i class="bi bi-cup-hot"></i>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <small>HTML • Tailwind • JavaScript</small>
+                        <h4>Taste & Thyme</h4>
+                        <p>A modern restaurant bistro website featuring digital food menus and table reservations.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://mathankumardev3-lab.github.io/elevate_restarent/" target="_blank" rel="noopener noreferrer" class="btn-project-demo">
+                            <span>Live Demo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="https://github.com/mathankumardev3-lab/elevate_restarent" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                            <i class="bi bi-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Haven Properties -->
+            <div class="project-card">
+                <div class="project-image project-gradient-4">
+                    <i class="bi bi-buildings"></i>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <small>HTML • Bootstrap • JavaScript</small>
+                        <h4>Haven Properties</h4>
+                        <p>A real estate agency website showcasing luxury villas, apartments, and property listings.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://mathankumardev3-lab.github.io/haven-properties/" target="_blank" rel="noopener noreferrer" class="btn-project-demo">
+                            <span>Live Demo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="https://github.com/mathankumardev3-lab/haven-properties" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                            <i class="bi bi-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Vertex Infra -->
+            <div class="project-card">
+                <div class="project-image project-gradient-5">
+                    <i class="bi bi-bar-chart-steps"></i>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <small>HTML • JavaScript • Civil Tech</small>
+                        <h4>Vertex Infra</h4>
+                        <p>A civil construction and infrastructure company website highlighting key civil projects.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://mathankumardev3-lab.github.io/vertex-infra-business/" target="_blank" rel="noopener noreferrer" class="btn-project-demo">
+                            <span>Live Demo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="https://github.com/mathankumardev3-lab/vertex-infra-business" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                            <i class="bi bi-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. StockFlow -->
+            <div class="project-card">
+                <div class="project-image project-gradient-6">
+                    <i class="bi bi-boxes"></i>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <small>Django • Python • MySQL</small>
+                        <h4>StockFlow</h4>
+                        <p>An inventory and billing web application for managing stock, products, and sales records.</p>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://mathankumardev3-lab.github.io/Vertex_inventory_management/" target="_blank" rel="noopener noreferrer" class="btn-project-demo">
+                            <span>Live Demo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                        <a href="https://github.com/mathankumardev3-lab/Vertex_inventory_management" target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                            <i class="bi bi-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <!-- Left Info -->
+            <div class="lg:col-span-6">
+                <p class="section-label">CONTACT</p>
+                <h2 class="section-title mt-1">
+                    Have a project <span>in mind?</span>
+                </h2>
+
+                <p class="text-muted mt-4 text-base leading-relaxed">
+                    Tell me about your business or project. Let's discuss how I can help you build custom billing software, a CRM, inventory system, e-commerce, or a fast business website.
+                </p>
+
+                <div class="mt-8 space-y-4">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <div>
+                            <small class="block text-xs text-muted uppercase font-semibold">WhatsApp</small>
+                            <a href="https://wa.me/917845360611" target="_blank" rel="noopener noreferrer" class="text-dark font-bold hover:text-primary transition-colors">
+                                +91 7845360611
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <small class="block text-xs text-muted uppercase font-semibold">Email</small>
+                            <a href="mailto:mathankumar.dev3@gmail.com" class="text-dark font-bold hover:text-primary transition-colors">
+                                mathankumar.dev3@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div>
+                            <small class="block text-xs text-muted uppercase font-semibold">Location</small>
+                            <strong class="text-dark font-bold">Pudukkottai, Tamil Nadu</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Fast Connect Card -->
+            <div class="lg:col-span-6">
+                <div class="contact-box">
+                    <h3 class="text-2xl font-bold text-dark mb-2">
+                        Let's build something.
+                    </h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">
+                        The fastest way to contact me is WhatsApp. Click below to start a chat directly with a pre-filled greeting.
+                    </p>
+
+                    <div class="space-y-3">
+                        <a href="https://wa.me/917845360611?text=Hello%20Mathan%2C%20I%20have%20a%20project%20in%20mind%20and%20would%20like%20to%20discuss%20it." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="w-full btn-primary-custom justify-center py-3.5 text-sm">
+                            <i class="bi bi-whatsapp"></i>
+                            <span>Chat on WhatsApp (+91 7845360611)</span>
+                        </a>
+
+                        <a href="mailto:mathankumar.dev3@gmail.com?subject=Project%20Inquiry%20%7C%20Mathan%20Kumar" 
+                           class="w-full btn-outline-custom justify-center py-3.5 text-sm">
+                            <i class="bi bi-envelope"></i>
+                            <span>Send an Email</span>
+                        </a>
+                    </div>
+
+                    <div class="mt-6 pt-5 border-t border-beach-border flex items-center justify-between text-xs text-muted">
+                        <span class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                            Quick response within a few hours
+                        </span>
+                        <a href="https://www.instagram.com/trilliongame.digital?evlk=MTV0MXpleHJsYmpmMw==" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors flex items-center gap-1 font-semibold">
+                            <i class="bi bi-instagram"></i> @trilliongmae.digital
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+            <span class="brand-dot"></span>
+            <span class="font-bold text-dark">Mathan Kumar</span>
+            <span>— Trillion Game</span>
+        </div>
+
+        <div>
+            <span>© 2026 Mathan Kumar. Hosted on GitHub Pages.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- Custom JavaScript -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>
